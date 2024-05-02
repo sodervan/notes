@@ -7,10 +7,10 @@ import Signup from "./Auth/Signup.vue";
 import Login from "./Auth/Login.vue";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     // { path: "/", redirect: "/allnotes" },
-    { path: "/notes4you", redirect: "/signup" },
+    { path: "/", redirect: "/signup" },
     { path: "/login", component: Login, name: "login" },
     { path: "/signup", component: Signup, name: "signup" },
     {
