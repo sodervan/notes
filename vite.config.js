@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/notes4you/',
+  base: process.env.NODE_ENV === "production" ? "/notes4you/" : "/",
   plugins: [vue()],
-})
+});
